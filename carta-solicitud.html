@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Carta de Solicitud</title>
+  </head>
+  <body>
+
+    <h1>Carta de Solicitud</h1>
+
+    <p>Estimado/a {{nombre}},</p>
+
+    <p>
+      Me dirijo a usted para expresar mi interés en el puesto de {{puesto}}
+      en su empresa. Soy un/a profesional con experiencia en el campo y estoy
+      entusiasmado/a con la oportunidad de formar parte de su equipo.
+    </p>
+    Skills:
+    <ul>
+      {% for skill in skills %}
+        <li>{{skill.name}}</li>
+      {% endfor %}
+    </ul>
+
+    <p>
+      Adjunto a esta carta encontrará mi currículum vitae, que detalla mi formación
+      académica y mi experiencia laboral relevante. Estoy seguro/a de que mis
+      habilidades y conocimientos en {% for skill in skills %} {{skill.name}} {% endfor %} serán un valioso aporte para su
+      organización.
+    </p>
+
+    <p>
+      Quedo a su disposición para proporcionar cualquier información adicional que
+      pueda necesitar. Agradezco de antemano su consideración y espero tener la
+      oportunidad de discutir cómo puedo contribuir al éxito de su empresa.
+    </p>
+
+    <p>Atentamente,</p>
+
+    <p>{{nombre}}</p>
+
+    <p>{{fecha}}</p>
+
+  </body>
+</html> 
